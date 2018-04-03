@@ -3,11 +3,12 @@ pragma solidity ^0.4.14;
 contract Payroll {
     uint salaryUnit = 1 ether;
     uint salary = 1;
-    address employee;
+    address employee;    //单员工系统中，这里是frank，现在是拓展后的结果
     address owner;
-    uint constant payDuration = 10 seconds;
+    uint constant payDuration = 10 seconds;    //这里为了便于测试，将30 days修改为10 seconds
     uint lastPayday = now;
     
+    //构造函数，用于初始化
     function Payroll(){
         owner = msg.sender;
     }
